@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './style.module.css';
 import ProgressBar from './components/ProgressBar';
 import QuestionForm from './components/QuestionForm';
@@ -13,9 +14,8 @@ const STEPS = {
 };
 
 const Analysis = () => {
-  // 当前步骤
+  const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState(STEPS.BASIC_INFO);
-  // 所有表单数据
   const [formData, setFormData] = useState({
     basicInfo: {},
     personality: {},
@@ -38,6 +38,11 @@ const Analysis = () => {
     // 如果不是最后一步，进入下一步
     if (currentStep < STEPS.RESULT) {
       setCurrentStep(currentStep + 1);
+    }
+
+    // 如果是最后一步，跳转到结果页面
+    if (currentStep === STEPS.VALUES) {
+      navigate('/result');
     }
   };
 

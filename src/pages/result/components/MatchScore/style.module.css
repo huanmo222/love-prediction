@@ -1,0 +1,72 @@
+.container {
+  padding: var(--spacing-large);
+  text-align: center;
+}
+
+.title {
+  font-size: var(--font-size-subtitle);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-large);
+}
+
+.scoreContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-large);
+}
+
+.scoreSvg {
+  width: 200px;
+  height: 200px;
+  transform: rotate(-90deg);
+}
+
+.scoreCircleBg {
+  stroke: var(--color-border);
+  stroke-width: 12;
+  fill: none;
+}
+
+.scoreCircle {
+  stroke: url(#scoreGradient);
+  stroke-width: 12;
+  fill: none;
+  stroke-linecap: round;
+  transition: stroke-dasharray 1.5s ease-in-out;
+}
+
+.scoreText {
+  font-size: 48px;
+  font-weight: var(--font-weight-bold);
+  fill: var(--color-text-primary);
+  transform: rotate(90deg);
+}
+
+.scoreInfo {
+  text-align: center;
+}
+
+.matchLevel {
+  font-size: var(--font-size-subtitle);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-small);
+}
+
+.scoreHint {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
+
+/* 响应式处理 */
+@media (max-width: 768px) {
+  .scoreSvg {
+    width: 160px;
+    height: 160px;
+  }
+
+  .scoreText {
+    font-size: 36px;
+  }
+} 
