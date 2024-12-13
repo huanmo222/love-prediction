@@ -1,8 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './style.module.css';
 import Button from '../../../../components/Button';
 
 const Hero = ({ className }) => {
+  const navigate = useNavigate();
+
+  const handleStartTest = () => {
+    navigate('/analysis');
+  };
+
   return (
     <section className={`${styles.hero} ${className}`}>
       <div className={styles.content}>
@@ -18,7 +25,7 @@ const Hero = ({ className }) => {
         </p>
         
         <div className={styles.actions}>
-          <Button size="large">
+          <Button size="large" onClick={handleStartTest}>
             开始测试
             <span className={styles.timeHint}>仅需5分钟</span>
           </Button>
