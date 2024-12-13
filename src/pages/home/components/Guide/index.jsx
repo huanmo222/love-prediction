@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './style.module.css';
 import Button from '../../../../components/Button';
 
@@ -49,9 +50,11 @@ const Guide = ({ className }) => {
         </div>
 
         <div className={styles.action}>
-          <Button size="large">
-            立即开始测试
-          </Button>
+          <Link to="/analysis">
+            <Button size="large">
+              立即开始测试
+            </Button>
+          </Link>
           <p className={styles.guarantee}>
             <span className={styles.guaranteeIcon}>🔒</span>
             隐私安全保障 · 5分钟完成 · 准确率98%
