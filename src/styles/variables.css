@@ -1,0 +1,34 @@
+:root {
+  /* 颜色 */
+  --color-primary: #6366f1;
+  --color-bg: #f9fafb;
+  --color-border: #e5e7eb;
+  --color-text-primary: #111827;
+  --color-text-secondary: #6b7280;
+  --color-text-regular: #374151;
+  --color-error: #ef4444;
+
+  /* 渐变 */
+  --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+
+  /* 间距 */
+  --spacing-small: 8px;
+  --spacing-medium: 16px;
+  --spacing-large: 24px;
+
+  /* 圆角 */
+  --radius-small: 4px;
+  --radius-medium: 8px;
+  --radius-large: 12px;
+
+  /* 字体大小 */
+  --font-size-small: 14px;
+  --font-size-body: 16px;
+  --font-size-subtitle: 20px;
+  --font-size-title: 24px;
+
+  /* 字体粗细 */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 600;
+} 

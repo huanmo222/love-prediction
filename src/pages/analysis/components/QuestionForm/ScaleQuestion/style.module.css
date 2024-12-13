@@ -1,0 +1,107 @@
+.questionContainer {
+  margin-bottom: calc(var(--spacing-large) * 2);
+  padding: var(--spacing-large);
+  background-color: white;
+  border-radius: var(--radius-large);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.questionHeader {
+  margin-bottom: var(--spacing-large);
+}
+
+.questionText {
+  font-size: var(--font-size-subtitle);
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.4;
+}
+
+.scaleContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-medium);
+  margin-bottom: var(--spacing-medium);
+}
+
+.scaleOption {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-small);
+  padding: var(--spacing-medium);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-medium);
+  background: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.scaleOption:hover {
+  border-color: var(--color-primary);
+  background-color: rgba(99, 102, 241, 0.05);
+}
+
+.scaleOption.selected {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary);
+}
+
+.scaleValue {
+  font-size: var(--font-size-subtitle);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  transition: color 0.3s ease;
+}
+
+.scaleOption.selected .scaleValue {
+  color: white;
+}
+
+.scaleLabel {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.scaleOption.selected .scaleLabel {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.scaleLegend {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+  margin-top: var(--spacing-small);
+}
+
+.errorText {
+  display: block;
+  color: var(--color-error);
+  font-size: var(--font-size-small);
+  margin-top: var(--spacing-small);
+}
+
+/* 响应式处理 */
+@media (max-width: 768px) {
+  .scaleContainer {
+    flex-direction: column;
+  }
+
+  .scaleOption {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .scaleLegend {
+    display: none;
+  }
+
+  .questionContainer {
+    padding: var(--spacing-medium);
+  }
+} 

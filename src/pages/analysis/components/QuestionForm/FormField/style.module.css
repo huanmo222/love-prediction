@@ -1,0 +1,81 @@
+.fieldContainer {
+  margin-bottom: var(--spacing-large);
+}
+
+.label {
+  display: block;
+  font-size: var(--font-size-body);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-small);
+}
+
+.required {
+  color: var(--color-error);
+  margin-left: var(--spacing-small);
+}
+
+.input,
+.select {
+  width: 100%;
+  padding: var(--spacing-medium);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-medium);
+  font-size: var(--font-size-body);
+  color: var(--color-text-primary);
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.input:focus,
+.select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.1);
+}
+
+.error {
+  border-color: var(--color-error);
+}
+
+.errorText {
+  display: block;
+  color: var(--color-error);
+  font-size: var(--font-size-small);
+  margin-top: var(--spacing-small);
+}
+
+.radioGroup,
+.checkboxGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-medium);
+}
+
+.radioLabel,
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.radioInput,
+.checkboxInput {
+  width: 18px;
+  height: 18px;
+  margin-right: var(--spacing-small);
+}
+
+.radioText,
+.checkboxText {
+  font-size: var(--font-size-body);
+  color: var(--color-text-regular);
+}
+
+/* 响应式处理 */
+@media (max-width: 768px) {
+  .radioGroup,
+  .checkboxGroup {
+    flex-direction: column;
+    gap: var(--spacing-small);
+  }
+} 

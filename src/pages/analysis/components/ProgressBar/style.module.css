@@ -1,0 +1,121 @@
+.progressContainer {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-medium);
+  position: relative;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex: 1;
+}
+
+.stepIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.step.active .stepIcon {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: white;
+}
+
+.checkmark {
+  font-size: var(--font-size-small);
+}
+
+.stepLabel {
+  margin-left: var(--spacing-small);
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+  transition: color 0.3s ease;
+}
+
+.step.active .stepLabel {
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.connector {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  right: 0;
+  height: 2px;
+  background-color: var(--color-border);
+  transform: translateY(-50%);
+  transition: background-color 0.3s ease;
+}
+
+.connector.active {
+  background-color: var(--color-primary);
+}
+
+.progressBar {
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-border);
+  border-radius: var(--radius-small);
+  margin: var(--spacing-medium) 0;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--gradient-primary);
+  border-radius: var(--radius-small);
+  transition: width 0.3s ease;
+}
+
+.progressInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
+
+.percentage {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary);
+}
+
+/* 响应式处理 */
+@media (max-width: 768px) {
+  .stepLabel {
+    display: none;
+  }
+
+  .steps {
+    margin: 0 var(--spacing-large);
+  }
+
+  .step {
+    flex: none;
+  }
+
+  .connector {
+    left: 40px;
+    right: -24px;
+  }
+} 

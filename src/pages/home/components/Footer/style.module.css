@@ -1,0 +1,136 @@
+.footer {
+  background-color: var(--color-text-primary);
+  color: white;
+  padding-top: calc(var(--spacing-large) * 2);
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-medium);
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: calc(var(--spacing-large) * 2);
+}
+
+.brand {
+  padding-right: var(--spacing-large);
+}
+
+.logo {
+  font-size: var(--font-size-subtitle);
+  font-weight: var(--font-weight-bold);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: var(--spacing-medium);
+}
+
+.description {
+  font-size: var(--font-size-body);
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+.links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-large);
+}
+
+.linkSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionTitle {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-medium);
+  color: white;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.link {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: var(--font-size-small);
+  line-height: 2;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: white;
+}
+
+.bottom {
+  margin-top: calc(var(--spacing-large) * 2);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: var(--spacing-large) var(--spacing-medium);
+}
+
+.bottomContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  font-size: var(--font-size-small);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.bottomLinks {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-small);
+}
+
+.bottomLink {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: var(--font-size-small);
+  transition: color 0.2s ease;
+}
+
+.bottomLink:hover {
+  color: white;
+}
+
+.divider {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* 响应式处理 */
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .brand {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .links {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-large);
+  }
+
+  .linkSection {
+    text-align: center;
+  }
+
+  .bottomContent {
+    flex-direction: column;
+    gap: var(--spacing-medium);
+    text-align: center;
+  }
+} 

@@ -1,0 +1,193 @@
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--spacing-large);
+  background-color: white;
+  border-radius: var(--radius-large);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.scoreSection {
+  text-align: center;
+  margin-bottom: calc(var(--spacing-large) * 2);
+}
+
+.scoreCircle {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto var(--spacing-large);
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+}
+
+.scoreNumber {
+  font-size: 48px;
+  font-weight: var(--font-weight-bold);
+}
+
+.scoreUnit {
+  font-size: 24px;
+  margin-left: 4px;
+}
+
+.scoreTitle {
+  font-size: var(--font-size-title);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-medium);
+}
+
+.scoreDescription {
+  font-size: var(--font-size-subtitle);
+  color: var(--color-text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.dimensionsSection {
+  margin-bottom: calc(var(--spacing-large) * 2);
+}
+
+.sectionTitle {
+  font-size: var(--font-size-subtitle);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-large);
+}
+
+.dimensions {
+  display: grid;
+  gap: var(--spacing-large);
+}
+
+.dimensionCard {
+  padding: var(--spacing-large);
+  background-color: var(--color-bg);
+  border-radius: var(--radius-medium);
+}
+
+.dimensionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-medium);
+}
+
+.dimensionName {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+}
+
+.dimensionScore {
+  font-size: var(--font-size-subtitle);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+}
+
+.progressBar {
+  height: 8px;
+  background-color: var(--color-border);
+  border-radius: var(--radius-small);
+  margin-bottom: var(--spacing-medium);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--gradient-primary);
+  border-radius: var(--radius-small);
+  transition: width 0.3s ease;
+}
+
+.dimensionDescription {
+  font-size: var(--font-size-body);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.adviceSection {
+  margin-bottom: calc(var(--spacing-large) * 2);
+}
+
+.adviceCard {
+  padding: var(--spacing-large);
+  background-color: var(--color-bg);
+  border-radius: var(--radius-medium);
+}
+
+.adviceTitle {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-medium);
+}
+
+.adviceList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.adviceList li {
+  position: relative;
+  padding-left: calc(var(--spacing-medium) + 8px);
+  margin-bottom: var(--spacing-small);
+  font-size: var(--font-size-body);
+  color: var(--color-text-regular);
+  line-height: 1.6;
+}
+
+.adviceList li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-medium);
+}
+
+/* 响应式处理 */
+@media (max-width: 768px) {
+  .container {
+    padding: var(--spacing-medium);
+  }
+
+  .scoreCircle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .scoreNumber {
+    font-size: 36px;
+  }
+
+  .scoreUnit {
+    font-size: 18px;
+  }
+
+  .dimensions {
+    gap: var(--spacing-medium);
+  }
+
+  .dimensionCard,
+  .adviceCard {
+    padding: var(--spacing-medium);
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+} 

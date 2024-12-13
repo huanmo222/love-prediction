@@ -1,0 +1,63 @@
+.form {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.formHeader {
+  text-align: center;
+  margin-bottom: calc(var(--spacing-large) * 2);
+}
+
+.formTitle {
+  font-size: var(--font-size-title);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-medium);
+}
+
+.formDescription {
+  font-size: var(--font-size-subtitle);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.fieldsContainer,
+.questionsContainer {
+  margin-bottom: calc(var(--spacing-large) * 2);
+}
+
+.formActions {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-medium);
+  margin-top: calc(var(--spacing-large) * 2);
+}
+
+.submitButton {
+  min-width: 120px;
+}
+
+/* 响应式处理 */
+@media (max-width: 768px) {
+  .formHeader {
+    margin-bottom: var(--spacing-large);
+  }
+
+  .formTitle {
+    font-size: var(--font-size-subtitle);
+  }
+
+  .formDescription {
+    font-size: var(--font-size-body);
+  }
+
+  .fieldsContainer,
+  .questionsContainer {
+    margin-bottom: var(--spacing-large);
+  }
+
+  .formActions {
+    margin-top: var(--spacing-large);
+  }
+} 

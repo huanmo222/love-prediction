@@ -1,0 +1,40 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.logo {
+  font-size: var(--font-size-subtitle);
+  font-weight: var(--font-weight-bold);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-medium);
+}
+
+.navLink {
+  color: var(--color-text-regular);
+  text-decoration: none;
+  font-size: var(--font-size-body);
+  transition: color 0.2s ease;
+}
+
+.navLink:hover {
+  color: var(--color-primary);
+}
+
+/* 响应式处理 */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+} 
